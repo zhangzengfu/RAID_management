@@ -1,0 +1,35 @@
+$def with(list1,list2)
+<html>
+<head>
+        <title>CREATE RAID 6 </title>
+</head>
+<body>
+        <div>create RAID 6</div>
+        <div>
+                $ b = len(list1)
+                <form name='main' method='POST'>
+                 $for i in xrange(b):
+                        <label for='chk1'>USE disk:$list1[i] </label><input type='checkbox' name='disk' value='$list1[i]'> <br/>
+		<br/>Each disk 4G                 
+		<br/>Selecting at least 4<br/><br/>
+		<div>
+                        The RAID size:<input type='text' name='size' style='width:80px;'>M
+                </div><br/>
+
+		<input type='submit' value='Create RAID6' style='width:120px;height:35px;'>
+                </form>
+        </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

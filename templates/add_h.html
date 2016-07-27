@@ -1,0 +1,23 @@
+$def with(list1,list2)
+<html>
+<head>
+	<title>ADD HOT SPARE</title>
+
+</head>
+<body>
+	<div>add hot spare</div>
+        <div>
+                $ b = len(list1)
+                $for i in xrange(b):
+                        Available disk:$list1[i]  size:$list2[i]M <br/>
+        </div>
+	<div>
+                <form name='main' method='POST'>
+                 $for i in xrange(b):
+                        <label for='chk1'>USE disk:$list1[i] </label><input type='radio' name='disk' value='$list1[i]'> <br/>
+                 <input type='submit'>
+                </form>
+        </div>
+
+</body>
+</html>

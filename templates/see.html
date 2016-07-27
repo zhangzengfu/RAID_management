@@ -1,0 +1,52 @@
+$def with(list)
+<html>
+<head>
+	<title>See RAIDS</title>
+</head>
+<body>
+	<div>see RAIDS :</div><br/>
+	<div>
+	$if not list:
+		There is no RAID
+		<br/><a href='http://0.0.0.0:8080/hello'>Return Create</a>
+	$else:
+		$for i in list:
+			$i  <br/>
+		<br/>
+		Select the RAID, to view details:<br/>
+		<br/>
+		<form method='POST'>
+			$for i in list:
+				<input type='submit' name='id' value='$i'><br/>
+		</form>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

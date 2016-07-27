@@ -1,0 +1,25 @@
+$def with(list)
+<html>
+<head>
+	<title>DELETE HOT SPARE</title>
+</head>
+<body>
+	<div>delete hot spare</div>
+	<div>
+	$if not list:
+		This RSID hot spare does not exist!
+		<br/><a href='http://0.0.0.0:8080/hello'>Return Create</a>
+	$else:
+		$ b = len(list)
+		$for i in xrange(b):
+			Available hot spare:$list[i]
+		<br/><br/>
+		<form name='main' method='POST'>
+		$for i in xrange(b):
+			<label>delete hot spare:$list[i]</label><input type='radio' name='disk' value='$list[i]'><br/>	
+		<input type='submit'>
+		</form>
+	</div>
+
+</body>
+</html>
